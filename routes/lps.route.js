@@ -4,7 +4,7 @@ import lps from '../utils/lps.js'
 
 const router = express.Router()
 
-router.post('/', express.json(), (req, res) => {
+router.get('/', express.json(), (req, res) => {
     const { s } = req.query
     if (s === undefined) return res.status(400).send("Enter String value")
     if (typeof s !== 'string')

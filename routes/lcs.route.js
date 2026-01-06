@@ -4,7 +4,7 @@ import lcs from '../utils/lcs.js'
 
 const router = express.Router()
 
-router.post('/', express.json(), (req, res) => {
+router.get('/', express.json(), (req, res) => {
     const { s1, s2 } = req.query
     if (s1 === undefined || s2 === undefined)
         return res.status(400).send("Both s1 and s2 should be Required & Non-Empty")

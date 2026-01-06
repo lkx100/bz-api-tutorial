@@ -2,7 +2,7 @@ import express from 'express'
 
 const router = express.Router()
 
-router.post('/', express.json(), (req, res) => {
+router.get('/', express.json(), (req, res) => {
     const { a, b } = req.query
     if (a === undefined || b === undefined)
         return res.status(400).send("Enter a & b values")
